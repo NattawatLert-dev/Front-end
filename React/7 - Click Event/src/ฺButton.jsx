@@ -1,0 +1,25 @@
+
+function Button(){
+
+    let count = 0;
+
+    const handleClick = (name) => {
+        if(count < 3){
+            count++;
+            console.log(`${name} you clicked me ${count} time/s`);
+        }
+        else{
+            console.log(`${name} stop clicking me!`);
+        }
+    };
+
+    //const handleClick2 = (name) => console.log(`${name} stop clicking me`);
+
+    // const handleClick3 = (e) => console.log(e); // ไว้ดูตำสั่งของ Onclick
+
+    const handleClick4 = (e) => e.target.textContent = "OUCH!";
+
+    return(<button onClick={(e) => handleClick4(e)}>Click me</button>);
+}
+
+export default Button
